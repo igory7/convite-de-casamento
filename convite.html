@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Convite de Casamento</title>
+  <style>
+    /* Estilos gerais para tornar a página responsiva */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4; /* Cor de fundo para toda a página */
+    }
+
+    .container {
+      position: relative;
+      width: 80vw; /* A largura será 80% da tela */
+      max-width: 500px; /* Limita a largura máxima a 500px */
+      height: auto;
+      max-height: 700px; /* Limita a altura máxima a 700px */
+      margin: 0 auto;
+    }
+
+    .background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* A imagem de fundo ocupa toda a área da div */
+    }
+
+    .overlay-icon {
+      position: absolute;
+      bottom: 15px;
+      left: 18%; /* Ajusta o ícone para a esquerda, com base na largura da tela */
+      width: 8vw; /* Define a largura em porcentagem, que se ajusta ao tamanho da tela */
+      max-width: 35px; /* Limita o tamanho máximo da imagem */
+    }
+
+    /* Botão responsivo */
+    .cta-button {
+      position: absolute;
+      bottom: 15px;
+      left: 24%; /* Posiciona o botão em relação à largura da tela */
+      color: rgb(0, 0, 0);
+      font-size: 14px; /* Tamanho fixo da fonte */
+      background-color: rgba(239, 252, 3, 0.5);
+      padding: 8px 16px; /* Ajusta o padding do botão */
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      min-width: 200px; /* Define uma largura mínima para o botão */
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    /* Efeito de hover no botão */
+    .cta-button:hover {
+      background-color: rgba(239, 252, 3, 0.7);
+    }
+
+    /* Ajustes para a versão mobile */
+    @media (max-width: 600px) {
+      .container {
+        width: 90vw; /* Faz a largura da div ser 90% em telas pequenas */
+        max-width: 100%; /* Remove a limitação de largura máxima */
+        height: 60vh; /* Ajusta a altura em proporção à altura da tela */
+      }
+
+      .cta-button {
+        font-size: 12px; /* Diminui o tamanho da fonte no mobile */
+        min-width: 150px; /* Diminui a largura mínima do botão */
+        padding: 6px 12px; /* Ajusta o padding para não ficar tão grande */
+        left: 20%; /* Ajusta a posição para o mobile */
+        bottom: 5px;
+      }
+
+      .overlay-icon {
+        width: 12vw; /* Ajusta a largura do ícone no mobile */
+        left: 15%; /* Ajusta a posição do ícone */
+        bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> <!-- Centraliza a div -->
+    <img src="image.png" alt="Imagem de fundo" class="background-image"> <!-- Imagem de fundo -->
+    <img src="icon local.png" alt="Imagem sobreposta" class="overlay-icon"> <!-- Imagem sobreposta no rodapé -->
+    
+    <!-- Frase como botão -->
+    <a href="https://www.google.com.br/maps/place/Associa%C3%A7%C3%A3o+dos+Vigilantes+de+maringa+e+Regi%C3%A3o/@-23.4212372,-51.8845744,17z/data=!3m1!4b1!4m6!3m5!1s0x94ecd0683aaf880f:0x8db1e36e5361e438!8m2!3d-23.4212421!4d-51.8819995!16s%2Fg%2F11c1p54cbr?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="cta-button" aria-label="Clique para abrir a localização do evento">
+      Clique para abrir a localização do evento
+    </a>
+  </div>
+</body>
+</html>
